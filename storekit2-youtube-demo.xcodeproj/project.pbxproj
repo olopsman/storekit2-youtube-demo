@@ -1,0 +1,588 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BE5D156D2903E0EC001F7B41 /* storekit2_youtube_demoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5D156C2903E0EC001F7B41 /* storekit2_youtube_demoApp.swift */; };
+		BE5D156F2903E0EC001F7B41 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5D156E2903E0EC001F7B41 /* ContentView.swift */; };
+		BE5D15712903E0ED001F7B41 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE5D15702903E0ED001F7B41 /* Assets.xcassets */; };
+		BE5D15742903E0ED001F7B41 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE5D15732903E0ED001F7B41 /* Preview Assets.xcassets */; };
+		BE5D157E2903E0ED001F7B41 /* storekit2_youtube_demoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5D157D2903E0ED001F7B41 /* storekit2_youtube_demoTests.swift */; };
+		BE5D15882903E0ED001F7B41 /* storekit2_youtube_demoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5D15872903E0ED001F7B41 /* storekit2_youtube_demoUITests.swift */; };
+		BE5D158A2903E0ED001F7B41 /* storekit2_youtube_demoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5D15892903E0ED001F7B41 /* storekit2_youtube_demoUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BE5D157A2903E0ED001F7B41 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BE5D15612903E0EC001F7B41 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BE5D15682903E0EC001F7B41;
+			remoteInfo = "storekit2-youtube-demo";
+		};
+		BE5D15842903E0ED001F7B41 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BE5D15612903E0EC001F7B41 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BE5D15682903E0EC001F7B41;
+			remoteInfo = "storekit2-youtube-demo";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BE5D15692903E0EC001F7B41 /* storekit2-youtube-demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "storekit2-youtube-demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE5D156C2903E0EC001F7B41 /* storekit2_youtube_demoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = storekit2_youtube_demoApp.swift; sourceTree = "<group>"; };
+		BE5D156E2903E0EC001F7B41 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		BE5D15702903E0ED001F7B41 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BE5D15732903E0ED001F7B41 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		BE5D15792903E0ED001F7B41 /* storekit2-youtube-demoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "storekit2-youtube-demoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE5D157D2903E0ED001F7B41 /* storekit2_youtube_demoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = storekit2_youtube_demoTests.swift; sourceTree = "<group>"; };
+		BE5D15832903E0ED001F7B41 /* storekit2-youtube-demoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "storekit2-youtube-demoUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE5D15872903E0ED001F7B41 /* storekit2_youtube_demoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = storekit2_youtube_demoUITests.swift; sourceTree = "<group>"; };
+		BE5D15892903E0ED001F7B41 /* storekit2_youtube_demoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = storekit2_youtube_demoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BE5D15662903E0EC001F7B41 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE5D15762903E0ED001F7B41 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE5D15802903E0ED001F7B41 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BE5D15602903E0EC001F7B41 = {
+			isa = PBXGroup;
+			children = (
+				BE5D156B2903E0EC001F7B41 /* storekit2-youtube-demo */,
+				BE5D157C2903E0ED001F7B41 /* storekit2-youtube-demoTests */,
+				BE5D15862903E0ED001F7B41 /* storekit2-youtube-demoUITests */,
+				BE5D156A2903E0EC001F7B41 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BE5D156A2903E0EC001F7B41 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BE5D15692903E0EC001F7B41 /* storekit2-youtube-demo.app */,
+				BE5D15792903E0ED001F7B41 /* storekit2-youtube-demoTests.xctest */,
+				BE5D15832903E0ED001F7B41 /* storekit2-youtube-demoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BE5D156B2903E0EC001F7B41 /* storekit2-youtube-demo */ = {
+			isa = PBXGroup;
+			children = (
+				BE5D156C2903E0EC001F7B41 /* storekit2_youtube_demoApp.swift */,
+				BE5D156E2903E0EC001F7B41 /* ContentView.swift */,
+				BE5D15702903E0ED001F7B41 /* Assets.xcassets */,
+				BE5D15722903E0ED001F7B41 /* Preview Content */,
+			);
+			path = "storekit2-youtube-demo";
+			sourceTree = "<group>";
+		};
+		BE5D15722903E0ED001F7B41 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				BE5D15732903E0ED001F7B41 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		BE5D157C2903E0ED001F7B41 /* storekit2-youtube-demoTests */ = {
+			isa = PBXGroup;
+			children = (
+				BE5D157D2903E0ED001F7B41 /* storekit2_youtube_demoTests.swift */,
+			);
+			path = "storekit2-youtube-demoTests";
+			sourceTree = "<group>";
+		};
+		BE5D15862903E0ED001F7B41 /* storekit2-youtube-demoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				BE5D15872903E0ED001F7B41 /* storekit2_youtube_demoUITests.swift */,
+				BE5D15892903E0ED001F7B41 /* storekit2_youtube_demoUITestsLaunchTests.swift */,
+			);
+			path = "storekit2-youtube-demoUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BE5D15682903E0EC001F7B41 /* storekit2-youtube-demo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BE5D158D2903E0ED001F7B41 /* Build configuration list for PBXNativeTarget "storekit2-youtube-demo" */;
+			buildPhases = (
+				BE5D15652903E0EC001F7B41 /* Sources */,
+				BE5D15662903E0EC001F7B41 /* Frameworks */,
+				BE5D15672903E0EC001F7B41 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "storekit2-youtube-demo";
+			productName = "storekit2-youtube-demo";
+			productReference = BE5D15692903E0EC001F7B41 /* storekit2-youtube-demo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BE5D15782903E0ED001F7B41 /* storekit2-youtube-demoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BE5D15902903E0ED001F7B41 /* Build configuration list for PBXNativeTarget "storekit2-youtube-demoTests" */;
+			buildPhases = (
+				BE5D15752903E0ED001F7B41 /* Sources */,
+				BE5D15762903E0ED001F7B41 /* Frameworks */,
+				BE5D15772903E0ED001F7B41 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BE5D157B2903E0ED001F7B41 /* PBXTargetDependency */,
+			);
+			name = "storekit2-youtube-demoTests";
+			productName = "storekit2-youtube-demoTests";
+			productReference = BE5D15792903E0ED001F7B41 /* storekit2-youtube-demoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BE5D15822903E0ED001F7B41 /* storekit2-youtube-demoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BE5D15932903E0ED001F7B41 /* Build configuration list for PBXNativeTarget "storekit2-youtube-demoUITests" */;
+			buildPhases = (
+				BE5D157F2903E0ED001F7B41 /* Sources */,
+				BE5D15802903E0ED001F7B41 /* Frameworks */,
+				BE5D15812903E0ED001F7B41 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BE5D15852903E0ED001F7B41 /* PBXTargetDependency */,
+			);
+			name = "storekit2-youtube-demoUITests";
+			productName = "storekit2-youtube-demoUITests";
+			productReference = BE5D15832903E0ED001F7B41 /* storekit2-youtube-demoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BE5D15612903E0EC001F7B41 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1400;
+				LastUpgradeCheck = 1400;
+				TargetAttributes = {
+					BE5D15682903E0EC001F7B41 = {
+						CreatedOnToolsVersion = 14.0.1;
+					};
+					BE5D15782903E0ED001F7B41 = {
+						CreatedOnToolsVersion = 14.0.1;
+						TestTargetID = BE5D15682903E0EC001F7B41;
+					};
+					BE5D15822903E0ED001F7B41 = {
+						CreatedOnToolsVersion = 14.0.1;
+						TestTargetID = BE5D15682903E0EC001F7B41;
+					};
+				};
+			};
+			buildConfigurationList = BE5D15642903E0EC001F7B41 /* Build configuration list for PBXProject "storekit2-youtube-demo" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BE5D15602903E0EC001F7B41;
+			productRefGroup = BE5D156A2903E0EC001F7B41 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BE5D15682903E0EC001F7B41 /* storekit2-youtube-demo */,
+				BE5D15782903E0ED001F7B41 /* storekit2-youtube-demoTests */,
+				BE5D15822903E0ED001F7B41 /* storekit2-youtube-demoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BE5D15672903E0EC001F7B41 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE5D15742903E0ED001F7B41 /* Preview Assets.xcassets in Resources */,
+				BE5D15712903E0ED001F7B41 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE5D15772903E0ED001F7B41 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE5D15812903E0ED001F7B41 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BE5D15652903E0EC001F7B41 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE5D156F2903E0EC001F7B41 /* ContentView.swift in Sources */,
+				BE5D156D2903E0EC001F7B41 /* storekit2_youtube_demoApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE5D15752903E0ED001F7B41 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE5D157E2903E0ED001F7B41 /* storekit2_youtube_demoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE5D157F2903E0ED001F7B41 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE5D15882903E0ED001F7B41 /* storekit2_youtube_demoUITests.swift in Sources */,
+				BE5D158A2903E0ED001F7B41 /* storekit2_youtube_demoUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BE5D157B2903E0ED001F7B41 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BE5D15682903E0EC001F7B41 /* storekit2-youtube-demo */;
+			targetProxy = BE5D157A2903E0ED001F7B41 /* PBXContainerItemProxy */;
+		};
+		BE5D15852903E0ED001F7B41 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BE5D15682903E0EC001F7B41 /* storekit2-youtube-demo */;
+			targetProxy = BE5D15842903E0ED001F7B41 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		BE5D158B2903E0ED001F7B41 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BE5D158C2903E0ED001F7B41 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BE5D158E2903E0ED001F7B41 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"storekit2-youtube-demo/Preview Content\"";
+				DEVELOPMENT_TEAM = UAF5HBHXWW;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.quonsepto.storekit2-youtube-demo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BE5D158F2903E0ED001F7B41 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"storekit2-youtube-demo/Preview Content\"";
+				DEVELOPMENT_TEAM = UAF5HBHXWW;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.quonsepto.storekit2-youtube-demo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		BE5D15912903E0ED001F7B41 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UAF5HBHXWW;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.quonsepto.storekit2-youtube-demoTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/storekit2-youtube-demo.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/storekit2-youtube-demo";
+			};
+			name = Debug;
+		};
+		BE5D15922903E0ED001F7B41 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UAF5HBHXWW;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.quonsepto.storekit2-youtube-demoTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/storekit2-youtube-demo.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/storekit2-youtube-demo";
+			};
+			name = Release;
+		};
+		BE5D15942903E0ED001F7B41 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UAF5HBHXWW;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.quonsepto.storekit2-youtube-demoUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "storekit2-youtube-demo";
+			};
+			name = Debug;
+		};
+		BE5D15952903E0ED001F7B41 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UAF5HBHXWW;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.quonsepto.storekit2-youtube-demoUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "storekit2-youtube-demo";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BE5D15642903E0EC001F7B41 /* Build configuration list for PBXProject "storekit2-youtube-demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE5D158B2903E0ED001F7B41 /* Debug */,
+				BE5D158C2903E0ED001F7B41 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BE5D158D2903E0ED001F7B41 /* Build configuration list for PBXNativeTarget "storekit2-youtube-demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE5D158E2903E0ED001F7B41 /* Debug */,
+				BE5D158F2903E0ED001F7B41 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BE5D15902903E0ED001F7B41 /* Build configuration list for PBXNativeTarget "storekit2-youtube-demoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE5D15912903E0ED001F7B41 /* Debug */,
+				BE5D15922903E0ED001F7B41 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BE5D15932903E0ED001F7B41 /* Build configuration list for PBXNativeTarget "storekit2-youtube-demoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE5D15942903E0ED001F7B41 /* Debug */,
+				BE5D15952903E0ED001F7B41 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BE5D15612903E0EC001F7B41 /* Project object */;
+}
