@@ -48,7 +48,7 @@ class StoreKitManager: ObservableObject {
         updateListenereTask?.cancel()
     }
     
-    //listen for transactions
+    //listen for transactions - start this early in the app
     func listenForTransactions() -> Task<Void, Error> {
         return Task.detached {
             //iterate through any transactions that don't come from a direct call to 'purchase()'
@@ -77,7 +77,6 @@ class StoreKitManager: ObservableObject {
             storeProducts = try await Product.products(for: productDict.values)
             
             // iterate the "type" if there are multiple product types.
-            print(storeProducts.count)
         } catch {
             print("Failed - error retrieving products \(error)")
         }
@@ -133,7 +132,7 @@ class StoreKitManager: ObservableObject {
                 //again check if transaction is verified
                 let transaction = try checkVerified(result)
                 // since we only have one type of producttype - .nonconsumables -- check if any storeProducts matches the transaction.productID then add to the purchasedCourses
-                if let course = storeProducts.first(where: { $0.id == transaction.productID }) {
+                if let course = storeProducts.first(where: { $0.id == transaction.productID}) {
                     purchasedCourses.append(course)
                 }
                 

@@ -8,5 +8,7 @@
 	<string>com.temporary.unrealengine</string>
 	<key>swift</key>
 	<string>com.temporary.swift</string>
+	<key>mulesoft</key>
+	<string>com.temporary.mulesoft</string>
 </dict>
 </plist>
