@@ -14,6 +14,8 @@
 		BE5D157E2903E0ED001F7B41 /* storekit2_youtube_demoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5D157D2903E0ED001F7B41 /* storekit2_youtube_demoTests.swift */; };
 		BE5D15882903E0ED001F7B41 /* storekit2_youtube_demoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5D15872903E0ED001F7B41 /* storekit2_youtube_demoUITests.swift */; };
 		BE5D158A2903E0ED001F7B41 /* storekit2_youtube_demoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5D15892903E0ED001F7B41 /* storekit2_youtube_demoUITestsLaunchTests.swift */; };
+		BE5D15972903E10D001F7B41 /* StoreKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5D15962903E10D001F7B41 /* StoreKitManager.swift */; };
+		BE5D159A2903E2E9001F7B41 /* ProductList.plist in Resources */ = {isa = PBXBuildFile; fileRef = BE5D15992903E2E9001F7B41 /* ProductList.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,9 @@
 		BE5D15832903E0ED001F7B41 /* storekit2-youtube-demoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "storekit2-youtube-demoUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE5D15872903E0ED001F7B41 /* storekit2_youtube_demoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = storekit2_youtube_demoUITests.swift; sourceTree = "<group>"; };
 		BE5D15892903E0ED001F7B41 /* storekit2_youtube_demoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = storekit2_youtube_demoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		BE5D15962903E10D001F7B41 /* StoreKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreKitManager.swift; sourceTree = "<group>"; };
+		BE5D15982903E18B001F7B41 /* Products.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = Products.storekit; sourceTree = "<group>"; };
+		BE5D15992903E2E9001F7B41 /* ProductList.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = ProductList.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +79,8 @@
 		BE5D15602903E0EC001F7B41 = {
 			isa = PBXGroup;
 			children = (
+				BE5D15992903E2E9001F7B41 /* ProductList.plist */,
+				BE5D15982903E18B001F7B41 /* Products.storekit */,
 				BE5D156B2903E0EC001F7B41 /* storekit2-youtube-demo */,
 				BE5D157C2903E0ED001F7B41 /* storekit2-youtube-demoTests */,
 				BE5D15862903E0ED001F7B41 /* storekit2-youtube-demoUITests */,
@@ -98,6 +105,7 @@
 				BE5D156E2903E0EC001F7B41 /* ContentView.swift */,
 				BE5D15702903E0ED001F7B41 /* Assets.xcassets */,
 				BE5D15722903E0ED001F7B41 /* Preview Content */,
+				BE5D15962903E10D001F7B41 /* StoreKitManager.swift */,
 			);
 			path = "storekit2-youtube-demo";
 			sourceTree = "<group>";
@@ -231,6 +239,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE5D159A2903E2E9001F7B41 /* ProductList.plist in Resources */,
 				BE5D15742903E0ED001F7B41 /* Preview Assets.xcassets in Resources */,
 				BE5D15712903E0ED001F7B41 /* Assets.xcassets in Resources */,
 			);
@@ -257,6 +266,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE5D15972903E10D001F7B41 /* StoreKitManager.swift in Sources */,
 				BE5D156F2903E0EC001F7B41 /* ContentView.swift in Sources */,
 				BE5D156D2903E0EC001F7B41 /* storekit2_youtube_demoApp.swift in Sources */,
 			);

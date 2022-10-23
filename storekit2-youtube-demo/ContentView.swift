@@ -8,12 +8,24 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject var storeKit = StoreKitManager()
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        VStack(alignment: .leading) {
+            ForEach(storeKit.storeProducts) {product in
+                HStack {
+                    Text(product.displayName)
+                    Spacer()
+                    Button(action: {
+                        // purchase this product
+                        Task { try await storeKit.purchase(product)
+                        }
+                    }) {
+                        Text(product.displayPrice)
+                            .padding(10)
+                          
+                    }
+                }
+            }
         }
         .padding()
     }
