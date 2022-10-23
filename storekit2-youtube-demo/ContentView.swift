@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @StateObject var storeKit = StoreKitManager()
+    @State var isPurchased: Bool = false
     var body: some View {
         VStack(alignment: .leading) {
             ForEach(storeKit.storeProducts) {product in
@@ -20,14 +21,29 @@ struct ContentView: View {
                         Task { try await storeKit.purchase(product)
                         }
                     }) {
-                        Text(product.displayPrice)
-                            .padding(10)
+                        if isPurchased {
+                            Text(Image(systemName: "checkmark"))
+                                .bold()
+                        } else {
+                            Text(product.displayPrice)
+                                .padding(10)
+                        }
                           
+                    }
+                    // on appear of each row
+                }.onAppear {
+                    Task {
+                        isPurchased = (try? await storeKit.isPurchased(product)) ?? false
                     }
                 }
             }
         }
         .padding()
+        
+    }
+    
+    func buyCourse() {
+        
     }
 }
 

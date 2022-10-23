@@ -37,6 +37,9 @@ class StoreKitManager: ObservableObject {
         //create async operation
         Task {
             await requestProducts()
+            
+            //deliver the products that the customer purchased
+            await updateCustomerProductStatus()
         }
     }
     
@@ -53,7 +56,8 @@ class StoreKitManager: ObservableObject {
                 do {
                     let transaction = try self.checkVerified(result)
                     
-                    //Deliver products to the user
+                    //the transaction is verified, deliver the content to the user
+                    await self.updateCustomerProductStatus()
                     
                     //Always finish a transaction
                     await transaction.finish()
@@ -91,6 +95,7 @@ class StoreKitManager: ObservableObject {
             let transaction = try checkVerified(verificationResult)
             
             //the transaction is verified, deliver the content to the user
+            await updateCustomerProductStatus()
             
             //always finish a transaction - performance
             await transaction.finish()
@@ -127,13 +132,25 @@ class StoreKitManager: ObservableObject {
             do {
                 //again check if transaction is verified
                 let transaction = try checkVerified(result)
-                
+                // since we only have one type of producttype - .nonconsumables -- check if any storeProducts matches the transaction.productID then add to the purchasedCourses
+                if let course = storeProducts.first(where: { $0.id == transaction.productID }) {
+                    purchasedCourses.append(course)
+                }
                 
             } catch {
                 //storekit has a transaction that fails verification, don't delvier content to the user
                 print("Transaction failed verification")
             }
+            
+            //finally assign the purchased products
+            self.purchasedCourses = purchasedCourses
         }
+    }
+    
+    //check if product has already been purchased
+    func isPurchased(_ product: Product) async throws -> Bool {
+        //as we only have one product type grouping .nonconsumable - we check if it belongs to the purchasedCourses which ran init()
+        return purchasedCourses.contains(product)
     }
     
 }
