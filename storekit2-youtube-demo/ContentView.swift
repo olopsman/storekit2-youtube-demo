@@ -32,10 +32,6 @@ struct ContentView: View {
         .padding()
         
     }
-    
-    func buyCourse() {
-        
-    }
 }
 
 struct CourseItem: View {

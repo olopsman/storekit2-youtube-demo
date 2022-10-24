@@ -82,31 +82,6 @@ class StoreKitManager: ObservableObject {
         }
     }
     
-    // call the product purchase and returns an optional transaction
-    func purchase(_ product: Product) async throws -> Transaction? {
-        //make a purchase request - optional parameters available
-        let result = try await product.purchase()
-        
-        // check the results
-        switch result {
-        case .success(let verificationResult):
-            //Transaction will be verified for automatically using JWT(jwsRepresentation) - we can check the result
-            let transaction = try checkVerified(verificationResult)
-            
-            //the transaction is verified, deliver the content to the user
-            await updateCustomerProductStatus()
-            
-            //always finish a transaction - performance
-            await transaction.finish()
-            
-            return transaction
-        case .userCancelled, .pending:
-            return nil
-        default:
-            return nil
-        }
-        
-    }
     
     //Generics - check the verificationResults
     func checkVerified<T>(_ result: VerificationResult<T>) throws -> T {
@@ -146,10 +121,37 @@ class StoreKitManager: ObservableObject {
         }
     }
     
+    // call the product purchase and returns an optional transaction
+    func purchase(_ product: Product) async throws -> Transaction? {
+        //make a purchase request - optional parameters available
+        let result = try await product.purchase()
+        
+        // check the results
+        switch result {
+        case .success(let verificationResult):
+            //Transaction will be verified for automatically using JWT(jwsRepresentation) - we can check the result
+            let transaction = try checkVerified(verificationResult)
+            
+            //the transaction is verified, deliver the content to the user
+            await updateCustomerProductStatus()
+            
+            //always finish a transaction - performance
+            await transaction.finish()
+            
+            return transaction
+        case .userCancelled, .pending:
+            return nil
+        default:
+            return nil
+        }
+        
+    }
+    
     //check if product has already been purchased
     func isPurchased(_ product: Product) async throws -> Bool {
         //as we only have one product type grouping .nonconsumable - we check if it belongs to the purchasedCourses which ran init()
         return purchasedCourses.contains(product)
     }
+    
     
 }
