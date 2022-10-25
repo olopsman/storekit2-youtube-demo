@@ -9,4 +9,4 @@ The following are covered in this repo demo.
 - how the restore purchases work.
 
 Check my youtube video for more details
-https://youtu.be/jLA0r7cvePo
+[https://youtu.be/jLA0r7cvePo]
