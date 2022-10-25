@@ -17,7 +17,7 @@ class StoreKitManager: ObservableObject {
     @Published var storeProducts: [Product] = []
     @Published var purchasedCourses : [Product] = []
     
-    var updateListenereTask: Task<Void, Error>? = nil
+    var updateListenerTask: Task<Void, Error>? = nil
     
     //maintain a plist of products
     private let productDict: [String : String]
@@ -32,7 +32,7 @@ class StoreKitManager: ObservableObject {
         }
         
         //Start a transaction listener as close to the app launch as possible so you don't miss any transaction
-        updateListenereTask = listenForTransactions()
+        updateListenerTask = listenForTransactions()
         
         //create async operation
         Task {
@@ -45,7 +45,7 @@ class StoreKitManager: ObservableObject {
     
     //denit transaction listener on exit or app close
     deinit {
-        updateListenereTask?.cancel()
+        updateListenerTask?.cancel()
     }
     
     //listen for transactions - start this early in the app

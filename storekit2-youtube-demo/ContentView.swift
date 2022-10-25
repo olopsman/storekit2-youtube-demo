@@ -13,6 +13,9 @@ struct ContentView: View {
     
     var body: some View {
         VStack(alignment: .leading) {
+            Text("In-App Purchase Demo")
+                .bold()
+            Divider()
             ForEach(storeKit.storeProducts) {product in
                 HStack {
                     Text(product.displayName)
