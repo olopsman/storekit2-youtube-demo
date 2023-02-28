@@ -10,5 +10,9 @@
 	<string>com.temporary.swift</string>
 	<key>mulesoft</key>
 	<string>com.temporary.mulesoft</string>
+	<key>premium</key>
+	<string>com.temporary.premium</string>
+	<key>standard</key>
+	<string>com.temporary.standard</string>
 </dict>
 </plist>

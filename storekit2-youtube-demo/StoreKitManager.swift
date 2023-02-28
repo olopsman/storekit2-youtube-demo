@@ -12,10 +12,17 @@ public enum StoreError: Error {
     case failedVerification
 }
 
+typealias RenewalInfo = StoreKit.Product.SubscriptionInfo.RenewalInfo
+typealias RenewalState = StoreKit.Product.SubscriptionInfo.RenewalState
+
 class StoreKitManager: ObservableObject {
     // if there are multiple product types - create multiple variable for each .consumable, .nonconsumable, .autoRenewable, .nonRenewable.
+    @Published private(set) var courses : [Product]
+    @Published private(set) var subscriptions : [Product]
     @Published var storeProducts: [Product] = []
     @Published var purchasedCourses : [Product] = []
+    @Published var purchasedSubscriptions : [Product] = []
+    @Published private(set) var subscriptionGroupStatus: RenewalState?
     
     var updateListenerTask: Task<Void, Error>? = nil
     
@@ -30,6 +37,10 @@ class StoreKitManager: ObservableObject {
         } else {
             productDict = [:]
         }
+        
+        //initialize empty products
+        courses = []
+        subscriptions = []
         
         //Start a transaction listener as close to the app launch as possible so you don't miss any transaction
         updateListenerTask = listenForTransactions()
@@ -74,9 +85,27 @@ class StoreKitManager: ObservableObject {
     func requestProducts() async {
         do {
             //using the Product static method products to retrieve the list of products
-            storeProducts = try await Product.products(for: productDict.values)
+            let storeProducts = try await Product.products(for: productDict.values)
             
             // iterate the "type" if there are multiple product types.
+            var newCourses: [Product] = []
+            var newSubscriptions: [Product] = []
+            
+            for product in storeProducts {
+                switch product.type {
+                case .nonConsumable:
+                    newCourses.append(product)
+                case .autoRenewable:
+                    newSubscriptions.append(product)
+                default:
+                    //ignore the product
+                    print("unknown product")
+                }
+            }
+
+            //sort each product by price, lowest to highest
+            courses = sortByPrice(newCourses)
+            subscriptions = sortByPrice(newSubscriptions)            
         } catch {
             print("Failed - error retrieving products \(error)")
         }
@@ -100,16 +129,32 @@ class StoreKitManager: ObservableObject {
     @MainActor
     func updateCustomerProductStatus() async {
         var purchasedCourses: [Product] = []
+        var purchasedSubscriptions: [Product] = []
         
         //iterate through all the user's purchased products
         for await result in Transaction.currentEntitlements {
             do {
                 //again check if transaction is verified
                 let transaction = try checkVerified(result)
-                // since we only have one type of producttype - .nonconsumables -- check if any storeProducts matches the transaction.productID then add to the purchasedCourses
-                if let course = storeProducts.first(where: { $0.id == transaction.productID}) {
-                    purchasedCourses.append(course)
+                //check the productType of the transaction and get corresponding product from the store
+                switch transaction.productType {
+                case .nonConsumable:
+                    if let course = courses.first(where: {$0.id == transaction.productID}) {
+                        purchasedCourses.append(course)
+                    }
+                case .autoRenewable:
+                    if let renewable = subscriptions.first(where: {$0.id == transaction.productID}) {
+                        purchasedSubscriptions.append(renewable)
+                    }
+                default:
+                    break
                 }
+                
+                
+//                // since we only have one type of producttype - .nonconsumables -- check if any storeProducts matches the transaction.productID then add to the purchasedCourses
+//                if let course = storeProducts.first(where: { $0.id == transaction.productID}) {
+//                    purchasedCourses.append(course)
+//                }
                 
             } catch {
                 //storekit has a transaction that fails verification, don't delvier content to the user
@@ -118,6 +163,10 @@ class StoreKitManager: ObservableObject {
             
             //finally assign the purchased products
             self.purchasedCourses = purchasedCourses
+            self.purchasedSubscriptions = purchasedSubscriptions
+            
+            // check the subscriptiongroupstatus
+            subscriptionGroupStatus = try? await subscriptions.first?.subscription?.status.first?.state
         }
     }
     
@@ -150,7 +199,18 @@ class StoreKitManager: ObservableObject {
     //check if product has already been purchased
     func isPurchased(_ product: Product) async throws -> Bool {
         //as we only have one product type grouping .nonconsumable - we check if it belongs to the purchasedCourses which ran init()
-        return purchasedCourses.contains(product)
+        switch product.type {
+        case .nonConsumable:
+            return purchasedCourses.contains(product)
+        case .autoRenewable:
+            return purchasedSubscriptions.contains(product)
+        default:
+            return false
+        }
+    }
+
+    func sortByPrice(_ products: [Product]) -> [Product] {
+        return products.sorted(by: { $0.price < $1.price })
     }
     
     
